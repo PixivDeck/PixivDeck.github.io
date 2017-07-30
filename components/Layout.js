@@ -24,11 +24,8 @@ export default class Layout extends React.Component {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta property="og:title" content="PixivDeck: マルチカラム多機能pixivクライアント" />
-          <meta
-            property="og:url"
-            content="https://akameco.github.io/PixivDeck-web"
-          />
-          <meta property="og:site_name" content="https://akameco.github.io" />
+          <meta property="og:url" content="https://PixivDeck.github.io" />
+          <meta property="og:site_name" content="https://PixivDeck.github.io" />
 
           <meta
             name="description"
@@ -43,7 +40,7 @@ export default class Layout extends React.Component {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="https://akameco.github.io/PixivDeck-web/static/ogp.png"
+            content="https://PixivDeck.github.io/static/ogp.png"
           />
 
           <meta property="fb:app_id" content="161451777749561" />

@@ -25,12 +25,12 @@ exports[`snapshot 1`] = `
       property="og:title"
     />
     <meta
-      content="https://akameco.github.io/PixivDeck-web"
+      content="https://PixivDeck.github.io"
       data-jsx={2168100380}
       property="og:url"
     />
     <meta
-      content="https://akameco.github.io"
+      content="https://PixivDeck.github.io"
       data-jsx={2168100380}
       property="og:site_name"
     />
@@ -50,7 +50,7 @@ exports[`snapshot 1`] = `
       property="og:type"
     />
     <meta
-      content="https://akameco.github.io/PixivDeck-web/static/ogp.png"
+      content="https://PixivDeck.github.io/static/ogp.png"
       data-jsx={2168100380}
       property="og:image"
     />
