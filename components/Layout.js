@@ -2,7 +2,6 @@
 import React from 'react'
 import Head from 'next/head'
 import { initGA, logPageView } from '../utils/analytics'
-import { STATIC_PATH } from '../utils/getPath'
 
 type Props = {
   children?: React.Element<*>,
@@ -55,23 +54,23 @@ export default class Layout extends React.Component {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href={`${STATIC_PATH}/apple-touch-icon.png`}
+            href="/static/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href={`${STATIC_PATH}/favicon-32x32.png`}
+            href="/static/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href={`${STATIC_PATH}/favicon-16x16.png`}
+            href="/static/favicon-16x16.png"
           />
           <link
             rel="mask-icon"
-            href={`${STATIC_PATH}/safari-pinned-tab.svg`}
+            href="/static/safari-pinned-tab.svg"
             color="#5bbad5"
           />
           <meta name="theme-color" content="#ffffff" />

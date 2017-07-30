@@ -1,9 +1,9 @@
 {
-  "name": "PixivDeck-web",
+  "name": "PixivDeck.github.io",
   "version": "0.0.0",
-  "description": "demo app",
+  "description": "PixivDeck GitHub Pages",
   "license": "MIT",
-  "repository": "akameco/PixivDeck-web",
+  "repository": "PixivDeck/PixivDeck.github.io",
   "author": {
     "name": "akameco",
     "email": "akameco.t@gmail.com",

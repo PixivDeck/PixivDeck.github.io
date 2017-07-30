@@ -7,7 +7,6 @@ import Download from '../components/Download'
 import Center from '../components/Center'
 import Title from '../components/Title'
 import DemoVideo from '../components/DemoVideo'
-import { STATIC_PATH } from '../utils/getPath'
 
 export default class Index extends Component {
   render() {
@@ -19,7 +18,7 @@ export default class Index extends Component {
             <Center>
               <Title />
               <img
-                src={`${STATIC_PATH}/ogp.png`}
+                src="/static/ogp.png"
                 alt="top image"
                 className="top-image"
               />
@@ -118,7 +117,7 @@ export default class Index extends Component {
           </div>
           <div className="benefit row">
             <h2>PixivDeckを入手</h2>
-            <img src={`${STATIC_PATH}/logo.png`} className="logo" />
+            <img src="/static/logo.png" className="logo" />
             <Download />
           </div>
         </Container>

@@ -6,4 +6,4 @@ git config user.name $GIT_NAME
 
 touch out/.nojekyll
 
-npm run gh-pages -- -r https://$GH_TOKEN@github.com/akameco/PixivDeck-web.git --dotfiles
+npm run gh-pages -- -r https://$GH_TOKEN@github.com/PixivDeck/PixivDeck.github.git --dotfiles -b master
