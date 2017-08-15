@@ -4,19 +4,26 @@ import * as platfrom from 'platform'
 import Button from './Button'
 import Center from './Center'
 
-const version = '0.15.0'
+async function getPkgVersion() {
+  const pkgUrl =
+    'https://raw.githubusercontent.com/akameco/PixivDeck/master/app/package.json'
+  const res = await fetch(pkgUrl)
+  const { version = '0.15.0' } = await res.json()
+  return version
+}
 
-const macOS = `PixivDeck-${version}.dmg`
-const windonws = `PixivDeck-Setup-${version}.exe`
-const linux = `PixivDeck-${version}-x86_64.AppImage`
+function getDownloadLink(version: string, family: string): string {
+  const downloadLink = `https://github.com/akameco/PixivDeck/releases/download/v${version}`
+  const macOS = `PixivDeck-${version}.dmg`
+  const windonws = `PixivDeck-Setup-${version}.exe`
+  const linux = `PixivDeck-${version}-x86_64.AppImage`
 
-const downloadLink = `https://github.com/akameco/PixivDeck/releases/download/v${version}`
-
-function getDownloadLink(family: string): string {
   if (family === 'OS X') {
     return `${downloadLink}/${macOS}`
   } else if (family === 'Windows' || family === 'Windows XP') {
     return `${downloadLink}/${windonws}`
+  } else if (family === 'Android' || family === 'iOS') {
+    return ''
   }
   return `${downloadLink}/${linux}`
 }
@@ -26,6 +33,8 @@ function getOSText(family: string): string {
     return 'Mac版'
   } else if (family === 'Windows' || family === 'Windows XP') {
     return 'Windows版'
+  } else if (family === 'Android' || family === 'iOS') {
+    return 'デスクトップ向けアプリケーションです。'
   }
   return 'Linux版'
 }
@@ -36,11 +45,16 @@ type State = {
 }
 
 export default class Download extends Component {
-  state: State
+  state: State = { link: '', text: 'Mac版' }
   componentWillMount() {
+    this.init()
+  }
+  async init() {
     const { os: { family } } = platfrom
+    const version = await getPkgVersion()
+
     this.setState({
-      link: getDownloadLink(family),
+      link: getDownloadLink(version, family),
       text: getOSText(family),
     })
   }
